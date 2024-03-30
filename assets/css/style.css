@@ -1,97 +1,302 @@
+/* Applicable to everything on the page */
 * {
   box-sizing: border-box;
   color: black;
   font-family: "Trebuchet MS", Tahoma, Arial, Verdana, sans-serif;
-  background-color: white;
-  font-size: .85vw;
+  font-size: 1vw;
+  z-index: 1;
+  text-align: center;
 }
 
+/* Variables for the colors of the page */
 :root{
-  --underline: black;
-  --highlight: black;
+  --hover: black;
+  --highlight: red;
+  --border: green;
+  --projects: blue;
+  --lightblue: skyblue;
+  --darkblue: darkblue;
+
 }
 
+/* Navigation home bar and effects */
 nav#home {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 1rem;
-  gap: 14rem;
+  gap: 10rem;
 }
 
 header nav a {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   text-decoration: none;
   line-height: 150%;
   font-weight: bold;
 }
 
 header nav a:hover {
-  /* text-decoration: underline solid var(--underline) .2rem; */
-  text-shadow: var(--underline) 0 0 .25rem;
+  text-shadow: var(--hover) 0 0 .12rem;
 }
 
+/* Picture of myself */
 figure img {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
   height: 35rem;
   width: 24rem;
-  margin-left: 11rem;
+  margin-left: 12rem;
 }
 
-.wrapper {
+/* My first name set to vertical font aligned next to my picture */
+.fname {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   flex-wrap: wrap;
-  margin-left: 35rem;
+  margin-left: 36rem;
   margin-top: -27rem;
-  position: relative;
-  width: 5.25rem;
-}
-
-.wrapper div {
   font-family: 'Brush Script MT', cursive; 
   font-weight: bold;
   font-size: 5.5rem;
 }
 
+/* Keywords to describe myself aligned on the right side wrapped in a radiused box with hover effects*/
 .snippet {
   display: flex;
   flex-direction: column;
   position: relative;
   align-items: flex-end;
   flex-wrap: wrap;
-  margin: -20rem 11rem auto auto;
+  margin: -20rem 12rem auto auto;
   gap: 1.5rem;
-  width: 38.25rem;
-  border: 2px solid black;
+  width: 40rem;
+  height: 20rem;
 }
 
 .snippet div {
   border: .25rem solid black;
   border-radius: .6rem;
-  padding: .15rem;
-  padding-left: .25rem;
-  padding-right: .25rem;
+  padding: .25rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.snippet div:hover {
+  box-shadow: 0 0 .1rem .05rem var(--hover);
+  text-shadow: var(--hover) 0 0 .05rem;
+}
+
+/* Border box design and hover effects */
+.border {
+  margin: 0 auto;
+  border: .25rem solid var(--border);
+  border-radius: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin: 6rem 20rem 2rem 20rem;
+}
+
+.border:hover {
+  box-shadow: 0 0 .5rem .25rem var(--hover);
+}
+
+.border:hover h1, .border:hover h2, .border:hover h3, .border:hover h4 {
+  text-shadow: var(--hover) 0 0 .05rem;
+}
+
+/* Setting the h1, h2, h3, h4 tags to correct size */
+h2, h3, h4 {
+  height: 3rem;
   font-size: 1.5rem;
 }
 
-
-
-
-
-
-
-@media screen and (max-width: 992px){
-
+h1 {
+  font-size: 2rem;
+  height: 3rem;
 }
 
-@media screen and (max-width: 768px){
+/* About me section */
+#about-me {
+  margin: 3rem 20rem 2rem 20rem;
+  padding: 1rem;
+  border-radius: 1.5rem;
+}
+
+/* Sub-header for about-me */
+.headline p {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: var(--highlight);
+}
+
+/* Main body */
+.container {
+  line-height: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.container #about-me span{
+  color: var(--highlight);
+}
+
+#projects {
   
 }
 
+.box1 {
+  
+}
+
+.box1 img {
+  width: 100%;
+}
+
+.box1 h2, .box1 p {
+  
+}
+
+.box2 {
+
+}
+
+.box2 img {
+  width: 100%;
+}
+
+.box2 h3, .box2 p {
+
+}
+
+.box3 {
+  
+}
+
+.box3 img {
+  width: 100%;
+}
+
+.box3 h3, .box3 p {
+
+}
+
+/* Contact box design and hover effects */
+#contact.border {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 3rem auto 3rem auto;
+  width: 40rem;
+}
+
+#contact.border div {
+  display: inline-flex;
+  gap: 5rem;
+}
+
+#contact.border a {
+  text-decoration: none;
+  width: 5rem;
+  margin: 0 auto;
+}
+
+#contact.border a:hover {
+  text-shadow: var(--hover) 0 0 .05rem;
+}
+
+/* Footer design and hover effects */
+
+footer nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  height: 3rem;
+  background-color: var(--lightblue);
+}
+
+footer nav a {
+ text-decoration: none;
+}
+
+footer nav a:hover {
+  text-decoration: underline solid var(--hover) .1rem;
+}
+
+@media screen and (max-width: 992px){
+  * {
+    font-size: 1.25vw;
+  }
+
+  figure img {
+    margin-left: 3rem;
+  }
+
+  .fname {
+    margin-left: 27rem;
+  }
+
+  .snippet {
+    margin: -20rem 3rem auto auto;
+  }
+
+  #about-me {
+    margin: 3rem 15rem 2rem 15rem;
+  }
+}
+
+@media screen and (max-width: 768px){
+
+  * {
+    font-size: 1.5vw;
+  }
+
+  figure img {
+    margin-left: 1rem;
+  }
+
+  .fname {
+    margin-left: 25rem;
+  }
+
+  .snippet {
+    margin: -20rem 1rem auto auto;
+    width: 30rem;
+  }
+
+  #about-me {
+    margin: 3rem 10rem 2rem 10rem;
+  }
+
+}
+
 @media screen and (max-width: 576px){
+  
+  * {
+    font-size: 1.75vw;
+  }
+
+  figure img {
+    margin-left: 1rem;
+  }
+  
+  .fname {
+    margin-left: 25rem;
+  }
+   
+  .snippet {
+    margin: -20rem 1rem auto auto;
+    width: 23rem;
+  }
+
+  #about-me {
+    margin: 3rem 10rem 2rem 10rem;
+  }
   
 }
