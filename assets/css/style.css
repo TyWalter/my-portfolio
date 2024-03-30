@@ -91,14 +91,18 @@ figure img {
   text-shadow: var(--hover) 0 0 .05rem;
 }
 
+/* Setting line height for main body */
+.container {
+  line-height: 1.25rem;
+}
+
 /* Border box design and hover effects */
 .border {
-  margin: 0 auto;
   border: .25rem solid var(--border);
   border-radius: 1.5rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  margin: 6rem 20rem 2rem 20rem;
+  margin: 3rem 20rem 1rem 20rem;
 }
 
 .border:hover {
@@ -111,20 +115,20 @@ figure img {
 
 /* Setting the h1, h2, h3, h4 tags to correct size */
 h2, h3, h4 {
-  height: 3rem;
   font-size: 1.5rem;
 }
 
 h1 {
   font-size: 2rem;
-  height: 3rem;
 }
 
 /* About me section */
 #about-me {
-  margin: 3rem 20rem 2rem 20rem;
   padding: 1rem;
-  border-radius: 1.5rem;
+}
+
+.border h1 {
+  margin-bottom: 1rem;
 }
 
 /* Sub-header for about-me */
@@ -134,55 +138,101 @@ h1 {
   color: var(--highlight);
 }
 
-/* Main body */
-.container {
-  line-height: 1.25rem;
-  display: flex;
-  flex-direction: column;
-}
-
 .container #about-me span{
   color: var(--highlight);
 }
 
+/* Project boxes/images/text */
 #projects {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.box1.border {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 20rem;
+  width: 82rem;
+}
+
+
+.box1.border img {
+  height: 20rem;
+  width: 82rem;
+  border-radius: 1.5rem;
+}
+
+.box1.border h2 {
+position: absolute;
+justify-content: center;
+margin: 0 auto;
+border: 2px solid red;
+}
+
+.box1.border p {
+  position: absolute;
+  justify-content: center;
+  margin: 5rem auto;
+  border: 2px solid gray;
+  width: 82rem;
+}
+
+.box2.border {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 20rem;
+  width: 82rem;
+}
+
+.box2.border img {
+  height: 20rem;
+  width: 82rem;
+  border-radius: 1.5rem;
+}
+
+.box2.border h3 {
+  position: absolute;
+  justify-content: center;
+  margin: 0 auto;
+  border: 2px solid red;
+}
   
+.box2.border p {
+  position: absolute;
+  justify-content: center;
+  margin: 5rem auto;
+  border: 2px solid gray;
 }
 
-.box1 {
+.box3.border {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 20rem;
+  width: 82rem;
+}
+
+.box3.border img {
+  height: 20rem;
+  width: 82rem;
+  border-radius: 1.5rem;
+}
+
+.box3.border h3 {
+  position: absolute;
+  justify-content: center;
+  margin: 0 auto;
+  border: 2px solid red;
+}
   
-}
-
-.box1 img {
-  width: 100%;
-}
-
-.box1 h2, .box1 p {
-  
-}
-
-.box2 {
-
-}
-
-.box2 img {
-  width: 100%;
-}
-
-.box2 h3, .box2 p {
-
-}
-
-.box3 {
-  
-}
-
-.box3 img {
-  width: 100%;
-}
-
-.box3 h3, .box3 p {
-
+.box3.border p {
+  position: absolute;
+  justify-content: center;
+  margin: 5rem auto;
+  border: 2px solid gray;
 }
 
 /* Contact box design and hover effects */
