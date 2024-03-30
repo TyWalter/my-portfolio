@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  color: black;
+  font-family: "Trebuchet MS", Tahoma, Arial, Verdana, sans-serif;
+  background-color: white;
+  font-size: .85vw;
+}
+
+:root{
+  --underline: black;
+  --highlight: black;
+}
+
+nav#home {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 1rem;
+  gap: 14rem;
+}
+
+header nav a {
+  font-size: 1.75rem;
+  text-decoration: none;
+  line-height: 150%;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  /* text-decoration: underline solid var(--underline) .2rem; */
+  text-shadow: var(--underline) 0 0 .25rem;
+}
+
+figure img {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  height: 35rem;
+  width: 24rem;
+  margin-left: 11rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 35rem;
+  margin-top: -27rem;
+  position: relative;
+  width: 5.25rem;
+}
+
+.wrapper div {
+  font-family: 'Brush Script MT', cursive; 
+  font-weight: bold;
+  font-size: 5.5rem;
+}
+
+.snippet {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin: -20rem 11rem auto auto;
+  gap: 1.5rem;
+  width: 38.25rem;
+  border: 2px solid black;
+}
+
+.snippet div {
+  border: .25rem solid black;
+  border-radius: .6rem;
+  padding: .15rem;
+  padding-left: .25rem;
+  padding-right: .25rem;
+  font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 992px){
+
+}
+
+@media screen and (max-width: 768px){
+  
+}
+
+@media screen and (max-width: 576px){
+  
+}
