@@ -4,8 +4,9 @@
   color: black;
   font-family: "Trebuchet MS", Tahoma, Arial, Verdana, sans-serif;
   font-size: 1vw;
-  z-index: 1;
+  z-index: 2;
   text-align: center;
+  background: rgb(211, 209, 209);
 }
 
 /* Variables for the colors of the page */
@@ -14,9 +15,7 @@
   --highlight: navy;
   --hover: #ec18ff;
   --lightblue: #16e4ff;
-  --darkblue: darkblue;
   --imagetext: rgb(236, 229, 229);
-
 }
 
 /* Navigation home bar and effects */
@@ -152,6 +151,7 @@ h4 {
 /* Project boxes/images/text */
 #projects {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -168,88 +168,100 @@ article h3 {
 }
 
 /* Setting project box size */
-.box1.border {
+
+.box1.border a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 82rem;
+  border-radius: 1.5rem;
 }
 
-.box2.border {
+.box2.border a {
   display: flex;
   flex-direction: column;
   width: 30rem;
   height: 20rem;
   align-items: center;
+  border-radius: 1.5rem;
 }
 
-.box3.border {
+.box3.border a {
   display: flex;
   flex-direction: column;
   width: 30rem;
   height: 40rem;
   align-items: center;
+  border-radius: 1.5rem;
 }
 
 /* Setting project image size to box size and setting image brightness */
 
-.box1.border img {
+.box1.border a img {
   width: 82rem;
   height: 20rem;
   border-radius: 1.5rem;
   filter: brightness(45%);
+  z-index: 1;
 }
 
-.box2.border img {
+.box2.border a img {
   height: 20rem;
   width: 30rem;
   border-radius: 1.5rem;
   filter: brightness(45%);
+  z-index: 1;
 }
 
-.box3.border img {
+.box3.border a img {
   height: 40rem;
   width: 30rem;
   border-radius: 1.5rem;
   filter: brightness(45%);
+  z-index: 1;
 }
 
 /* Setting project header size and location */
-.box1.border h2,
-.box2.border h3 {
+.box1.border a h2,
+.box2.border a h3 {
   position: absolute;
   justify-content: center;
   margin: 4rem auto;
+  background-color: transparent;
 }
 
-.box3.border h3 {
+.box3.border a h3 {
   position: absolute;
   justify-content: center;
   margin: 10rem auto;
+  background-color: transparent;
 }
 
 /* Setting project paragraph size and location */
-.box1.border p {
+.box1.border a p {
   position: absolute;
   justify-content: center;
   margin: 9rem auto;
-  width: 50rem;
+  width: 52rem;
+  background-color: transparent;
 }
   
-.box2.border p {
+.box2.border a p {
   position: absolute;
   justify-content: center;
   margin: 9rem auto;
   width: 25rem;
   align-content: center;
+  background-color: transparent;
 }
 
-.box3.border p {
+.box3.border a p {
   position: absolute;
   justify-content: center;
   margin: 15rem auto;
   width: 25rem;
   align-content: center;
+  background-color: transparent;
 }
 
 
@@ -295,10 +307,17 @@ footer nav {
   gap: 5rem;
   height: 3rem;
   background-color: var(--lightblue);
+  background-image: radial-gradient(var(--lightblue), var(--hover));
+  border-top: .2rem solid black;
 }
 
 footer nav a {
  text-decoration: none;
+ background-color: transparent;
+}
+
+footer div {
+  background-color: transparent;
 }
 
 footer nav a:hover {
@@ -327,9 +346,13 @@ footer nav a:hover {
   }
 
 /* Reducing size of first project to fit the viewport */
-  .box1.border,
-  .box1.border img {
+  .box1.border a,
+  .box1.border a img {
     width: 70rem;
+  }
+
+  .box1.border a p {
+    width: 60rem;
   }
 
 /* Reducing margin size of about-me to fit the viewport*/
@@ -361,9 +384,13 @@ footer nav a:hover {
   }
 
 /* Reducing size of first project to fit the viewport */
-  .box1.border,
-  .box1.border img {
+  .box1.border a,
+  .box1.border a img {
     width: 55rem;
+  }
+
+  .box1.border a p {
+    width: 45rem;
   }
 
 /* Reducing margin size of about-me to fit the viewport*/
@@ -387,8 +414,12 @@ footer nav a:hover {
   }
 
 /* Reducing size of first project to fit the viewport */
-  .box1.border,
+  .box1.border a,
   .box1.border img {
     width: 50rem;
+  }
+
+  .box1.border a p {
+    width: 40rem;
   }
 }
