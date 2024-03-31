@@ -8,7 +8,7 @@ This portfolio displays some of my projects that I have done in the past with re
 * <img src="./assets/images/Tyler.webp" width="150" height="250" /> Is a picture of myself
 * All other images on the deployed website are taken from [unsplash](https://unsplash.com/)
 <!-- (TODO: ADD SCREENSHOT) -->
-* ![Here is a screenshot]() of the deployed website
+* ![Here is a screenshot](./assets/images/screenshot.png) of the deployed website
 
 ## Usage
 This is intended to be used as a career services aid when applying for a job as well as a history of my time in the UofM software development bootcamp.
