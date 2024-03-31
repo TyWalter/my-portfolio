@@ -10,12 +10,12 @@
 
 /* Variables for the colors of the page */
 :root{
-  --hover: black;
-  --highlight: red;
-  --border: green;
-  --projects: blue;
-  --lightblue: skyblue;
+  --border: #000000;
+  --highlight: navy;
+  --hover: #ec18ff;
+  --lightblue: #16e4ff;
   --darkblue: darkblue;
+  --imagetext: rgb(236, 229, 229);
 
 }
 
@@ -77,7 +77,7 @@ figure img {
 }
 
 .snippet div {
-  border: .25rem solid black;
+  border: .2rem solid var(--border);
   border-radius: .6rem;
   padding: .25rem;
   padding-left: .5rem;
@@ -87,43 +87,50 @@ figure img {
 }
 
 .snippet div:hover {
-  box-shadow: 0 0 .1rem .05rem var(--hover);
-  text-shadow: var(--hover) 0 0 .05rem;
-}
-
-/* Setting line height for main body */
-.container {
-  line-height: 1.25rem;
+  box-shadow: 0 0 .5rem .05rem var(--hover);
+  text-shadow: var(--hover) 0 0 .2rem;
 }
 
 /* Border box design and hover effects */
 .border {
-  border: .25rem solid var(--border);
+  outline: .2rem solid var(--border);
   border-radius: 1.5rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
   margin: 3rem 20rem 1rem 20rem;
 }
 
 .border:hover {
-  box-shadow: 0 0 .5rem .25rem var(--hover);
+  box-shadow: 0 0 1rem .3rem var(--hover);
 }
 
-.border:hover h1, .border:hover h2, .border:hover h3, .border:hover h4 {
-  text-shadow: var(--hover) 0 0 .05rem;
+.border:hover h1,
+.border:hover h2,
+.border:hover h3,
+.border:hover h4 {
+  text-shadow: var(--hover) 0 0 .3rem;
 }
+
+article:hover p {
+  text-shadow: var(--hover) 0 0 .5rem;
+}
+
+.headline, span {
+  text-shadow: var(--hover) 0 0 .12rem;
+} 
 
 /* Setting the h1, h2, h3, h4 tags to correct size */
-h2, h3, h4 {
-  font-size: 1.5rem;
+h1,
+h2,
+h3 {
+  font-size: 2.5rem;
 }
 
-h1 {
-  font-size: 2rem;
+h4 {
+  font-size: 1.75rem;
 }
 
 /* About me section */
 #about-me {
+  line-height: 1.25rem;
   padding: 1rem;
 }
 
@@ -138,126 +145,145 @@ h1 {
   color: var(--highlight);
 }
 
-.container #about-me span{
+#about-me span{
   color: var(--highlight);
 }
 
 /* Project boxes/images/text */
 #projects {
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
+/* Projects heading and paragrap text size and color */
+article p {
+  font-size: 1.5rem;
+}
+
+article p,
+article h2,
+article h3 {
+  color: var(--imagetext);
+}
+
+/* Setting project box size */
 .box1.border {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  height: 20rem;
-  width: 82rem;
-}
-
-
-.box1.border img {
-  height: 20rem;
-  width: 82rem;
-  border-radius: 1.5rem;
-}
-
-.box1.border h2 {
-position: absolute;
-justify-content: center;
-margin: 0 auto;
-border: 2px solid red;
-}
-
-.box1.border p {
-  position: absolute;
-  justify-content: center;
-  margin: 5rem auto;
-  border: 2px solid gray;
   width: 82rem;
 }
 
 .box2.border {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  width: 30rem;
   height: 20rem;
-  width: 82rem;
-}
-
-.box2.border img {
-  height: 20rem;
-  width: 82rem;
-  border-radius: 1.5rem;
-}
-
-.box2.border h3 {
-  position: absolute;
-  justify-content: center;
-  margin: 0 auto;
-  border: 2px solid red;
-}
-  
-.box2.border p {
-  position: absolute;
-  justify-content: center;
-  margin: 5rem auto;
-  border: 2px solid gray;
+  align-items: center;
 }
 
 .box3.border {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 20rem;
+  flex-direction: column;
+  width: 30rem;
+  height: 40rem;
+  align-items: center;
+}
+
+/* Setting project image size to box size and setting image brightness */
+
+.box1.border img {
   width: 82rem;
+  height: 20rem;
+  border-radius: 1.5rem;
+  filter: brightness(45%);
+}
+
+.box2.border img {
+  height: 20rem;
+  width: 30rem;
+  border-radius: 1.5rem;
+  filter: brightness(45%);
 }
 
 .box3.border img {
-  height: 20rem;
-  width: 82rem;
+  height: 40rem;
+  width: 30rem;
   border-radius: 1.5rem;
+  filter: brightness(45%);
+}
+
+/* Setting project header size and location */
+.box1.border h2,
+.box2.border h3 {
+  position: absolute;
+  justify-content: center;
+  margin: 4rem auto;
 }
 
 .box3.border h3 {
   position: absolute;
   justify-content: center;
-  margin: 0 auto;
-  border: 2px solid red;
+  margin: 10rem auto;
+}
+
+/* Setting project paragraph size and location */
+.box1.border p {
+  position: absolute;
+  justify-content: center;
+  margin: 9rem auto;
+  width: 50rem;
 }
   
+.box2.border p {
+  position: absolute;
+  justify-content: center;
+  margin: 9rem auto;
+  width: 25rem;
+  align-content: center;
+}
+
 .box3.border p {
   position: absolute;
   justify-content: center;
-  margin: 5rem auto;
-  border: 2px solid gray;
+  margin: 15rem auto;
+  width: 25rem;
+  align-content: center;
 }
+
 
 /* Contact box design and hover effects */
-#contact.border {
+#contact .border {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   flex-wrap: wrap;
-  margin: 3rem auto 3rem auto;
-  width: 40rem;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 7rem;
+  width: 45rem;
 }
 
-#contact.border div {
+#contact .border div {
   display: inline-flex;
-  gap: 5rem;
+  gap: 10rem;
 }
 
-#contact.border a {
+#contact .border h4 {
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+#contact .border a {
   text-decoration: none;
   width: 5rem;
   margin: 0 auto;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
-#contact.border a:hover {
-  text-shadow: var(--hover) 0 0 .05rem;
+#contact .border a:hover {
+  text-shadow: var(--hover) 0 0 .25rem;
 }
 
 /* Footer design and hover effects */
@@ -276,14 +302,18 @@ footer nav a {
 }
 
 footer nav a:hover {
-  text-decoration: underline solid var(--hover) .1rem;
+  text-decoration: underline solid black .1rem;
 }
 
+/* Screen size 992px and smaller */
 @media screen and (max-width: 992px){
+  
+/* Increasing font size*/
   * {
     font-size: 1.25vw;
   }
 
+/* Reducing margins to view everything in the viewport */
   figure img {
     margin-left: 3rem;
   }
@@ -296,17 +326,27 @@ footer nav a:hover {
     margin: -20rem 3rem auto auto;
   }
 
+/* Reducing size of first project to fit the viewport */
+  .box1.border,
+  .box1.border img {
+    width: 70rem;
+  }
+
+/* Reducing margin size of about-me to fit the viewport*/
   #about-me {
     margin: 3rem 15rem 2rem 15rem;
   }
 }
 
+/* Screen size 768px and smaller */
 @media screen and (max-width: 768px){
 
+/* Increasing font size*/
   * {
     font-size: 1.5vw;
   }
 
+/* Reducing margins to view everything in the viewport */
   figure img {
     margin-left: 1rem;
   }
@@ -320,33 +360,35 @@ footer nav a:hover {
     width: 30rem;
   }
 
+/* Reducing size of first project to fit the viewport */
+  .box1.border,
+  .box1.border img {
+    width: 55rem;
+  }
+
+/* Reducing margin size of about-me to fit the viewport*/
   #about-me {
     margin: 3rem 10rem 2rem 10rem;
   }
 
 }
 
+/* Screen size 576px and smaller */
 @media screen and (max-width: 576px){
   
+/* Increasing font size*/
   * {
     font-size: 1.75vw;
   }
 
-  figure img {
-    margin-left: 1rem;
-  }
-  
-  .fname {
-    margin-left: 25rem;
-  }
-   
+/* Reducing margins to view everything in the viewport */
   .snippet {
-    margin: -20rem 1rem auto auto;
     width: 23rem;
   }
 
-  #about-me {
-    margin: 3rem 10rem 2rem 10rem;
+/* Reducing size of first project to fit the viewport */
+  .box1.border,
+  .box1.border img {
+    width: 50rem;
   }
-  
 }
