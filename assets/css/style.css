@@ -151,12 +151,11 @@ h4 {
 /* Project boxes/images/text */
 #projects {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-/* Projects heading and paragrap text size and color */
+/* Projects heading and paragraph text size and color */
 article p {
   font-size: 1.5rem;
 }
@@ -171,8 +170,10 @@ article h3 {
 
 .box1.border a {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
+  height: 20rem;
   width: 82rem;
   border-radius: 1.5rem;
 }
